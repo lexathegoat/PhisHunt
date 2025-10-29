@@ -3,9 +3,9 @@ chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     if (response) {
       const el = document.getElementById("result");
       if (response.safe) {
-        el.innerHTML = `<span class="safe">Güvenli</span><br>Skor: ${(response.score*100).toFixed(1)}%`;
+        el.innerHTML = `<span class="safe">Secure</span><br>Skor: ${(response.score*100).toFixed(1)}%`;
       } else {
-        el.innerHTML = `<span class="danger">PHISHING RİSKİ!</span><br>Skor: ${(response.score*100).toFixed(1)}%`;
+        el.innerHTML = `<span class="danger">PHISHING!</span><br>Skor: ${(response.score*100).toFixed(1)}%`;
       }
     }
   });
